@@ -11,8 +11,8 @@ const navLinks = [
 
 export default function Navbar() {
     return (
-        <section className="py-4">
-            <div className="container">
+        <section className="py-4 lg:py-8">
+            <div className="container max-w-5xl">
                 <div className="grid grid-cols-2 lg:grid-cols-3 border border-white/15 rounded-full p-2 px-4 md:pr-2items-center">
                     <div>
                         <Image
@@ -21,9 +21,13 @@ export default function Navbar() {
                             className="h-9 w-auto md:h-auto"
                         />
                     </div>
-                    <div>
-                        <nav>
-                            
+                    <div className="lg:flex justify-center items-center hidden">
+                        <nav className="flex gap-6 font-medium">
+                            {navLinks.map((link) => (
+                                <a href={link.href} key={link.label}>
+                                    {link.label}
+                                </a>
+                            ))}
                         </nav>
                     </div>
                     <div className="flex justify-end gap-4">
@@ -43,8 +47,8 @@ export default function Navbar() {
                             <line x1="3" y1="6" x2="21" y2="6"></line>
                             <line x1="3" y1="18" x2="21" y2="18"></line>
                         </svg>
-                        <Button variant="secondary">Log In</Button>
-                        <Button variant="primary">Sign Up</Button>
+                        <Button variant="secondary" className="hidden md:inline-flex items-center">Log In</Button>
+                        <Button variant="primary" className="hidden md:inline-flex items-center">Sign Up</Button>
                     </div>
                 </div>
             </div>
