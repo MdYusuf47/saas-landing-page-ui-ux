@@ -1,5 +1,5 @@
 import { cva } from "class-variance-authority";
-import React, { HTMLAttributes } from "react";
+import React, { ButtonHTMLAttributes} from "react";
 
 const classes = cva("border  h-12 rounded-full px-6 font-medium", {
     variants: {
@@ -13,7 +13,7 @@ const classes = cva("border  h-12 rounded-full px-6 font-medium", {
 const Button = (
     props: {
         variant: "primary" | "secondary";
-    } & HTMLAttributes<HTMLButtonElement>
+    } & ButtonHTMLAttributes<HTMLButtonElement>
 ) => {
     const { variant, className, ...otherProps } = props;
     return (
