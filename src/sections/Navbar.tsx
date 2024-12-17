@@ -47,8 +47,18 @@ export default function Navbar() {
                             <line x1="3" y1="6" x2="21" y2="6"></line>
                             <line x1="3" y1="18" x2="21" y2="18"></line>
                         </svg>
-                        <Button variant="secondary" className="hidden md:inline-flex items-center">Log In</Button>
-                        <Button variant="primary" className="hidden md:inline-flex items-center">Sign Up</Button>
+                        <Button
+                            variant="secondary"
+                            className="hidden md:inline-flex items-center"
+                        >
+                            Log In
+                        </Button>
+                        <Button
+                            variant="primary"
+                            className="hidden md:inline-flex items-center"
+                        >
+                            Sign Up
+                        </Button>
                     </div>
                 </div>
             </div>
